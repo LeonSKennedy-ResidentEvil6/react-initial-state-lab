@@ -8,6 +8,7 @@ export default class Bomb extends React.Component {
         }
     }
 
+    // method 1 
     render() {
         let msg = this.state.secondsLeft === 0 ? 'Boom!' : `${this.state.secondsLeft} seconds left before I go boom!`;
         return (
@@ -17,11 +18,12 @@ export default class Bomb extends React.Component {
         )
     }
 
+    // method 2
     // render() {
     //     return (
     //         this.state.secondsLeft !== 0 ? <div>{this.state.secondsLeft} seconds left before I go boom!</div> : <p>Boom!</p>
     //     )
         
-    }
+    // }
 
 }
