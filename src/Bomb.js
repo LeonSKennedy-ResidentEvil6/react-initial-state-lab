@@ -8,22 +8,19 @@ export default class Bomb extends React.Component {
         }
     }
 
-    // render() {
-    //     if (this.state.secondLeft > 0) {
-    //         return ( 
-    //             <div>{this.state.secondsLeft} seconds left before I go boom!</div>
-    //         )
-    //     }  else {
-    //         return (
-    //             <p>Boom!</p>
-    //         )
-    //     }
-    // }
-
     render() {
+        let msg = this.state.secondsLeft === 0 ? 'Boom!' : `${this.state.secondsLeft} seconds left before I go boom!`;
         return (
-            this.state.secondsLeft !== 0 ? <div>{this.state.secondsLeft} seconds left before I go boom!</div> : <p>Boom!</p>
+            <div>
+                {msg}
+            </div>
         )
+    }
+
+    // render() {
+    //     return (
+    //         this.state.secondsLeft !== 0 ? <div>{this.state.secondsLeft} seconds left before I go boom!</div> : <p>Boom!</p>
+    //     )
         
     }
 
